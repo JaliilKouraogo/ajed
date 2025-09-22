@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inscription en ligne</title>
+  <meta name="description" content="AJED — Formation d’allemand A1 à B2 à Ouagadougou (livres gratuits), et projet Vivre & Travailler en Allemagne." />
+  <link rel="icon" href="assets/icons/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <p><strong>Prochaine rentrée :</strong> 06 octobre 2025</p>
+        <p>Lun → Ven · 18h – 20h · Sur le grand goudron du SIAO, à côté de la station Shell, Ouagadougou</p>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a href="index.html" class="brand" aria-label="Accueil">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="title"><b>AJED</b><span>apprendre aujourd’hui & voyager demain</span></div>
+        </a>
+        <nav class="nav-links" aria-label="Menu principal">
+          <a href="programmes.html" >Programmes</a>
+          <a href="tarifs.html" >Tarifs</a>
+          <a href="projet-allemagne.html" >Projet Allemagne</a>
+          <a href="test-niveau.html" >Test de niveau</a>
+          <a href="a-propos.html" >À propos</a>
+          <a href="contact.html" >Contact</a>
+          <a href="inscription.html" class="nav-cta">S’inscrire</a>
+        </nav>
+        <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="drawer hidden" id="drawer" aria-hidden="true">
+        <a href="programmes.html">Programmes</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="projet-allemagne.html">Projet Allemagne</a>
+        <a href="test-niveau.html">Test de niveau</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+        <a class="wacta" target="_blank" rel="noopener" href="https://wa.me/22671822468?text=Bonjour%2C%20je%20souhaite%20m%E2%80%99inscrire%20%C3%A0%20la%20formation%20d%E2%80%99allemand%20%28rentr%C3%A9e%2006%2F10%2F2025%29.">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section container">
+    <h2>Demande d’inscription</h2>
+    <p class="muted">Remplissez le formulaire. Nous vous recontactons rapidement (jours ouvrés).</p>
+
+    <form id="inscriptionForm" class="form" novalidate>
+      <div class="row">
+        <div>
+          <label class="label" for="nom">Nom</label>
+          <input class="input" id="nom" name="nom" required />
+          <div id="nomErr" class="err"></div>
+        </div>
+        <div>
+          <label class="label" for="prenom">Prénom</label>
+          <input class="input" id="prenom" name="prenom" required />
+          <div id="prenomErr" class="err"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label class="label" for="telephone">Téléphone (WhatsApp)</label>
+          <input class="input" id="telephone" name="telephone" placeholder="+226..." required />
+          <div id="telephoneErr" class="err"></div>
+        </div>
+        <div>
+          <label class="label" for="email">E-mail</label>
+          <input class="input" id="email" name="email" type="email" required />
+          <div id="emailErr" class="err"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label class="label" for="niveau">Niveau souhaité</label>
+          <select class="select" id="niveau" name="niveau" required>
+            <option value="">Choisir…</option>
+            <option>A1</option><option>A2</option><option>B1</option><option>B2</option>
+            <option>Je ne sais pas (faire le test)</option>
+          </select>
+          <div id="niveauErr" class="err"></div>
+        </div>
+        <div>
+          <label class="label" for="objectif">Objectif</label>
+          <select class="select" id="objectif" name="objectif">
+            <option>Études</option><option>Travail</option><option>Visa</option><option>Autre</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label class="label" for="mode">Mode</label>
+          <select class="select" id="mode" name="mode" required>
+            <option value="">Choisir…</option><option>Présentiel</option><option>Hybride</option>
+          </select>
+          <div id="modeErr" class="err"></div>
+        </div>
+        <div>
+          <label class="label" for="creneau">Créneau préféré</label>
+          <select class="select" id="creneau" name="creneau" required>
+            <option value="">Choisir…</option><option>Soir (18h–20h)</option><option>Week-end</option>
+          </select>
+          <div id="creneauErr" class="err"></div>
+        </div>
+      </div>
+
+      <div>
+        <label class="label" for="message">Message (facultatif)</label>
+        <textarea class="textarea" id="message" name="message" rows="4" placeholder="Questions, précisions…"></textarea>
+      </div>
+
+      <p class="help">En soumettant, vous acceptez d’être contacté·e par téléphone/WhatsApp/e-mail.</p>
+      <button class="btn btn-primary" type="submit">Envoyer ma demande</button>
+      <p id="formOutput"></p>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container" style="padding:26px 16px">
+      <p style="margin:0 0 6px"><strong>Contact</strong></p>
+      <p style="margin:0">WhatsApp : <a target="_blank" rel="noopener" href="https://wa.me/22671822468">+22671822468</a> · Appel : <a href="tel:+22676768165">+22676768165</a></p>
+      <p style="margin:6px 0 0;font-size:13px;opacity:.8">© 2025 AJED — Sur le grand goudron du SIAO, à côté de la station Shell, Ouagadougou.</p>
+      <p style="margin:6px 0 0;font-size:13px;opacity:.8"><a href="legal/cgv.html">CGV</a> · <a href="legal/confidentialite.html">Confidentialité</a> · <a href="seo/sitemap.xml">Sitemap</a></p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/validate.js"></script>
+  <script src="assets/js/quiz.js"></script>
+</body>
+</html>

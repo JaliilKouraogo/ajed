@@ -1,0 +1,26 @@
+{
+  "brand": "AJED",
+  "slogan": "apprendre aujourd’hui et voyager demain",
+  "phones": [
+    "+22671822468",
+    "+22676768165"
+  ],
+  "whatsapp": "22671822468",
+  "address": "Sur le grand goudron du SIAO, à côté de la station Shell, Ouagadougou",
+  "schedule": "Lun → Ven · 18h – 20h",
+  "nextIntake": "06 octobre 2025",
+  "pricing": {
+    "A1": 100000,
+    "A2": 110000,
+    "B1": 130000,
+    "B2": 170000,
+    "booksIncluded": true,
+    "installments": 2,
+    "currency": "FCFA"
+  },
+  "project": {
+    "name": "Vivre & Travailler en Allemagne",
+    "eligibility": "Diplôme B2 validé",
+    "successFeeAfter": "Contrat et visa obtenus & vérifiés par l’ambassade"
+  }
+}
