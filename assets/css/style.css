@@ -52,3 +52,88 @@ header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop
 .input,.select,.textarea{width:100%;padding:12px;border:1px solid var(--ring);border-radius:12px;background:#fff}
 .err{color:#b91c1c;font-size:13px;margin-top:6px} .success{color:#166534;font-size:14px;margin-top:10px} .help{font-size:13px;color:var(--muted)}
 footer{background:#0b1220;color:#e5e7eb} footer a{color:#fff;text-decoration:underline}
+/* --- Extra Components for richer homepage --- */
+.kpis{display:grid;gap:12px;margin-top:18px}
+@media(min-width:900px){.kpis{grid-template-columns:repeat(4,1fr)}}
+.kpi{background:#fff;border:1px solid var(--ring);border-radius:16px;padding:16px;text-align:center;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.kpi .num{font-size:28px;font-weight:900}
+.kpi .label{color:var(--muted);font-size:13px;margin-top:4px}
+
+.steps{display:grid;gap:12px}
+@media(min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:#fff;border:1px solid var(--ring);border-radius:16px;padding:16px}
+.step h3{margin:0 0 6px;font-size:18px}
+.step p{margin:0;color:var(--muted)}
+
+.testimonials{display:grid;gap:12px}
+@media(min-width:900px){.testimonials{grid-template-columns:repeat(3,1fr)}}
+.tcard{background:#fff;border:1px solid var(--ring);border-radius:16px;padding:16px}
+.tcard .name{font-weight:700;margin-top:10px}
+.tcard .lvl{font-size:12px;color:var(--muted)}
+
+.partners{display:grid;gap:10px;grid-template-columns:repeat(3,1fr)}
+.partner{background:#fff;border:1px solid var(--ring);border-radius:12px;height:56px;display:flex;align-items:center;justify-content:center;color:#94a3b8}
+
+.faq{background:#fff;border:1px solid var(--ring);border-radius:16px;padding:16px}
+.faq details{border-top:1px solid var(--ring);padding:10px 0}
+.faq details:first-child{border-top:0}
+.faq summary{cursor:pointer;font-weight:700}
+
+.cta-strip{background:linear-gradient(90deg, rgba(245,158,11,.1), rgba(14,165,164,.1));border:1px solid var(--ring);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:10px}
+@media(min-width:700px){.cta-strip{flex-direction:row;align-items:center;justify-content:space-between}}
+
+.embed-map{height:320px;border:1px solid var(--ring);border-radius:16px;overflow:hidden}
+.notice{font-size:13px;color:var(--muted)}
+
+.top-grid{display:grid;gap:16px}
+@media(min-width:900px){.top-grid{grid-template-columns:2fr 1fr}}
+
+.badge-flag{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--ring);padding:6px 10px;border-radius:999px;background:#fff;font-weight:700;font-size:12px}
+
+/* ===== Responsive & Layout Fixes ===== */
+
+/* Sticky footer layout */
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; }
+.page-main { flex: 1 0 auto; }   /* main content grows to fill */
+footer { flex-shrink: 0; margin-top: auto; }
+
+/* Footer responsive grid */
+footer .container { display: grid; gap: 8px; }
+@media (min-width: 700px) {
+  footer .container { grid-template-columns: 1fr auto; align-items: center; }
+}
+
+/* Container breathing on small screens */
+@media (max-width: 480px){
+  .container{ padding: 0 12px; }
+  .h1{ font-size: 28px; }
+  .lead{ font-size: 15px; }
+  .nav-cta{ padding: 9px 12px; }
+}
+
+/* Tablet header spacing */
+@media (min-width: 700px) and (max-width: 1024px){
+  .nav-links{ gap: 14px; }
+}
+
+/* Responsive table: horizontal scroll when needed */
+.table-wrap{ width: 100%; overflow-x: auto; border-radius: 12px; }
+.table{ min-width: 560px; } /* let it scroll on small screens */
+
+/* Small cards spacing */
+.fact{ padding: 12px 14px; }
+.lvl{ padding: 14px; }
+.kpi{ padding: 14px; }
+.step{ padding: 14px; }
+
+/* Drawer spacing on mobile */
+.drawer a{ padding: 12px 0; }
+
+/* --- Pill feature bar (like screenshot) --- */
+.pill-features{padding:22px 14px;background:#fff;border:1px solid var(--ring);border-radius:999px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:center}
+.pill-item{display:flex;align-items:center;gap:10px;font-weight:600;color:#0f172a;white-space:nowrap}
+.pill-dot{width:8px;height:8px;border-radius:999px;background:#f59e0b}
+@media (max-width:700px){
+  .pill-features{border-radius:16px;justify-content:flex-start}
+}
