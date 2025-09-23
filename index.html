@@ -21,7 +21,7 @@
     <div class="container">
       <div class="nav">
         <a href="index.html" class="brand" aria-label="Accueil">
-          <div class="logo" aria-hidden="true"></div>
+          <img src="assets/icons/logo.png" alt="Logo AJED" class="logo" />
           <div class="title"><b>AJED</b><span>apprendre aujourd’hui & voyager demain</span></div>
         </a>
         <nav class="nav-links" aria-label="Menu principal">
@@ -161,29 +161,45 @@
         </div>
       </div>
     </section>
+<!-- Carte + CTA strip -->
+<section class="section" id="venir">
+  <div class="container top-grid">
+    <div>
+      <h2>Nous trouver</h2>
 
-    <!-- Carte + CTA strip -->
-    <section class="section" id="venir">
-      <div class="container top-grid">
-        <div>
-          <h2>Nous trouver</h2>
-          <div class="embed-map">
-            <iframe title="AJED — Localisation" width="100%" height="100%" style="border:0"
-              loading="lazy" allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Ouagadougou%2C%20SIAO%20Shell&output=embed"></iframe>
-          </div>
-          <p class="notice" style="margin-top:8px">Adresse : Sur le grand goudron du SIAO, à côté de la station Shell, Ouagadougou</p>
-        </div>
-        <div class="cta-strip">
-          <div><span class="badge-flag">🇩🇪 AJED</span> <strong style="margin-left:6px">Rejoignez la prochaine rentrée : 06 octobre 2025</strong><div class="notice">Lun → Ven · 18h – 20h · Cours du soir</div></div>
-          <div style="display:flex;gap:10px">
-            <a class="btn btn-primary" href="inscription.html">S’inscrire</a>
-            <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://wa.me/22671822468?text=Bonjour%2C%20je%20souhaite%20m%E2%80%99inscrire%20%C3%A0%20la%20formation%20d%E2%80%99allemand%20%28rentr%C3%A9e%2006%2F10%2F2025%29.">WhatsApp</a>
-          </div>
-        </div>
+      <!-- iFrame centré sur les coordonnées -->
+      <div class="embed-map">
+        <iframe
+          title="AJED — Localisation"
+          width="100%" height="100%" style="border:0"
+          loading="lazy" allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=12.371399,-1.474999&z=15&output=embed">
+        </iframe>
       </div>
-    </section>
+
+      <!-- Bouton : ouvre Google Maps en appli / web -->
+      <p class="notice" style="margin-top:8px">
+        Adresse : Sur le grand goudron du SIAO, à côté de la station Shell, Ouagadougou —
+        <a href="https://maps.google.com/?q=12.371399,-1.474999" target="_blank" rel="noopener">
+          Ouvrir dans Google Maps
+        </a>
+      </p>
+    </div>
+
+    <div class="cta-strip">
+      <div>
+        <span class="badge-flag">🇩🇪 AJED</span>
+        <strong style="margin-left:6px">Rejoignez la prochaine rentrée : 06 octobre 2025</strong>
+        <div class="notice">Lun → Ven · 18h – 20h · Cours du soir</div>
+      </div>
+      <div style="display:flex;gap:10px">
+        <a class="btn btn-primary" href="inscription.html">S’inscrire</a>
+        <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://wa.me/22671822468?text=Bonjour%2C%20je%20souhaite%20m%E2%80%99inscrire%20%C3%A0%20la%20formation%20d%E2%80%99allemand%20%28rentr%C3%A9e%2006%2F10%2F2025%29.">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- JSON-LD SEO: Organization + Course + FAQ -->
     <script type="application/ld+json">
@@ -227,13 +243,26 @@
 
 
   <footer>
-    <div class="container" style="padding:26px 16px">
-      <p style="margin:0 0 6px"><strong>Contact</strong></p>
-      <p style="margin:0">WhatsApp : <a target="_blank" rel="noopener" href="https://wa.me/22671822468">+22671822468</a> · Appel : <a href="tel:+22676768165">+22676768165</a></p>
-      <p style="margin:6px 0 0;font-size:13px;opacity:.8">© 2025 AJED — Sur le grand goudron du SIAO, à côté de la station Shell, Ouagadougou.</p>
-      <p style="margin:6px 0 0;font-size:13px;opacity:.8"><a href="legal/cgv.html">CGV</a> · <a href="legal/confidentialite.html">Confidentialité</a> · <a href="seo/sitemap.xml">Sitemap</a></p>
-    </div>
-  </footer>
+  <div class="container" style="padding:26px 16px; text-align:center">
+    
+    <!-- Logo AJED -->
+    <img src="assets/icons/logo.png" alt="Logo AJED" class="footer-logo" />
+
+    <p style="margin:10px 0 6px"><strong>Contact</strong></p>
+    <p style="margin:0">
+      WhatsApp : <a target="_blank" rel="noopener" href="https://wa.me/22671822468">+22671822468</a> · 
+      Appel : <a href="tel:+22676768165">+22676768165</a>
+    </p>
+    <p style="margin:6px 0 0;font-size:13px;opacity:.8">
+      © 2025 AJED — Sur le grand goudron du SIAO, à côté de la station Shell, Ouagadougou.
+    </p>
+    <!-- <p style="margin:6px 0 0;font-size:13px;opacity:.8">
+      <a href="legal/cgv.html">CGV</a> · 
+      <a href="legal/confidentialite.html">Confidentialité</a> · 
+      <a href="seo/sitemap.xml">Sitemap</a>
+    </p> -->
+  </div>
+</footer>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/validate.js"></script>
   <script src="assets/js/quiz.js"></script>
