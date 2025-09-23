@@ -166,3 +166,24 @@ footer .container { display: grid; gap: 8px; }
 @media (min-width: 900px) {
   .drawer { display: none !important; }
 }
+
+/* === TABLES RESPONSIVES === */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* scroll fluide iOS */
+  border-radius: 12px;
+}
+
+.table {
+  min-width: 560px; /* force un scroll horizontal sur petits écrans */
+}
+
+/* Affinage lisibilité mobile */
+@media (max-width: 640px) {
+  .table th, .table td {
+    padding: 10px;
+    font-size: 14px;
+    white-space: nowrap;      /* évite les retours bizarres */
+  }
+}
