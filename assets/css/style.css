@@ -137,3 +137,30 @@ footer .container { display: grid; gap: 8px; }
 @media (max-width:700px){
   .pill-features{border-radius:16px;justify-content:flex-start}
 }
+
+
+/* --- Mobile drawer fix --- */
+.drawer {
+  display: block;
+  border-top: 1px solid var(--ring);
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 64px;
+  z-index: 50;
+  box-shadow: 0 8px 20px rgba(2,6,23,.08);
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media(min-width:900px){
+  .drawer { display: none !important; }
+}
+
+/* Empêche le scroll quand le menu mobile est ouvert */
+.body-lock {
+  overflow: hidden;
+}
