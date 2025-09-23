@@ -139,28 +139,30 @@ footer .container { display: grid; gap: 8px; }
 }
 
 
-/* --- Mobile drawer fix --- */
-.drawer {
-  display: block;
-  border-top: 1px solid var(--ring);
-  background: #fff;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 64px;
-  z-index: 50;
-  box-shadow: 0 8px 20px rgba(2,6,23,.08);
+/* === MOBILE NAVBAR FIX (FINAL) === */
+.nav { position: relative; } /* pour ancrer le menu si besoin */
+
+@media (max-width: 899.98px) {
+  /* IMPORTANT : la drawer doit être visible par défaut,
+     et masquée via la classe .hidden uniquement */
+  .drawer {
+    display: block !important;
+    position: fixed;      /* couvre toute la largeur sous le header */
+    left: 0; right: 0; top: 64px;
+    background: #fff;
+    border-top: 1px solid var(--ring);
+    z-index: 1000;
+    box-shadow: 0 12px 24px rgba(2,6,23,.12);
+    max-height: 70vh;     /* scroll si beaucoup de liens */
+    overflow-y: auto;
+    padding: 8px 16px;
+  }
+  .drawer a { display:block; padding:14px 0; border-bottom:1px solid var(--ring); }
+  .hidden { display: none !important; } /* contrôle l’ouverture/fermeture */
+  .body-lock { overflow: hidden; }      /* bloque le scroll arrière-plan */
 }
 
-.hidden {
-  display: none !important;
-}
-
-@media(min-width:900px){
+/* Jamais visible en desktop */
+@media (min-width: 900px) {
   .drawer { display: none !important; }
-}
-
-/* Empêche le scroll quand le menu mobile est ouvert */
-.body-lock {
-  overflow: hidden;
 }
